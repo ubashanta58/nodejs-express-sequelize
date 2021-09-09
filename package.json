@@ -1,7 +1,6 @@
 {
   "name": "nodeexpresssequelize",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -16,5 +15,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubashanta58/nodejs-express-sequelize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ubashanta58/nodejs-express-sequelize/issues"
+  },
+  "homepage": "https://github.com/ubashanta58/nodejs-express-sequelize#readme",
+  "description": ""
 }
