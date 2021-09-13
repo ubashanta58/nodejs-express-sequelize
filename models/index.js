@@ -3,6 +3,7 @@ const {Sequelize,DataTypes} = require('sequelize');
 const sequelize = new Sequelize('test', 'root', '',{
     host:'localhost',
     dialect:'mysql',
+    logging: false,
     pool: {max:5,min:0,idle:10000}
 });
 
@@ -19,9 +20,10 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.users = require('./users')(sequelize,DataTypes);
-
-db.sequelize.sync()
+db.sequelize.sync({force:false,match:/test$/})
 .then (()=>{
-    console.log("yes re sync");
+    console.log("yes re-sync");
 })
+
+db.users = require('./users')(sequelize,DataTypes);
+module.exports = db;
